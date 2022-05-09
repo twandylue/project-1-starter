@@ -2,6 +2,9 @@
 CSCI-442: Project 1 - Warm Up
 =============================
 
+.. important::
+TODO: TAs: Please explicitly include the statements for memory safety checks. 
+
 :Due: Please see the assignment on Canvas for dates. 
 
 .. important::
