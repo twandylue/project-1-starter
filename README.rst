@@ -3,14 +3,13 @@ CSCI-442: Project 1 - Warm Up
 =============================
 
 .. important::
-TODO: TAs: Please explicitly include the statements for memory safety checks. 
 
 :Due: Please see the assignment on Canvas for dates. 
 
 .. important::
 
-   * You'll want to read this **entire document** before beginning the project.  Please ask any questions you have on Piazza, but only if this README does not answer your question.
-   * Finally, be sure to start early.  If you wait until a few days before the due date, you are unlikely to finish in time.
+   * You'll want to read this **entire document** before beginning the project. Please ask any questions you have on Piazza, but only if this README does not answer your question.
+   * Finally, be sure to start early. If you wait until a few days before the due date, you are unlikely to finish in time.
 
 Introduction
 ============
@@ -80,21 +79,30 @@ On any of the errors below, you should print the error message to ``stderr``
 (standard error), **NOT** ``stdout`` (standard output). You can accomplish this
 using ``fprintf()``.
 
-- **Input file is the same as the output file**: Print the error message ``error: input
-  and output file must differ`` and exit with return code 1.
+- **Input file is the same as the output file**: Print the error message ``error: input and output file must differ`` 
+  and exit with return code 1.
 
 - **Invalid files**: If the user specifies an input or output file, and for some reason,
-  when you try to open said file (e.g., ``input.txt``) and fail, you should print the
+  when you try to open said file (e.g., ``input.txt``) and fail, print the
   error message ``error: cannot open file 'input.txt'`` (or whatever the file is named)
   and exit with return code 1.
 
-- **System call fails**: All system calls can fail. Should one (e.g., ``malloc()``), print
-  the error message ``error: malloc failed`` (or whatever the system call is named) and
-  exit with return code 1.
+- **System call fails**: All system calls can fail. For grading purposes, you can print any error message, but 
+  you must exit with a return code 1.
+  
+  - Ex: If ``malloc()`` fails, you can print any error message like ``error: malloc failed`` 
+    (or whatever the system call is named) and exit with return code 1.
 
 - **Incorrect number of arguments passed to program**: Should too many, or too few, arguments
   be provided to ``reverse``, then print the error message ``usage: reverse <input> <output>``
   and exit with return code 1.
+  
+- **Memory Safety**: If your program is susceptible to buffer-overflow based on certain inputs, it is not memory safe.
+  
+  - You will lose points for using these memory unsafe functions: ``strcat``, ``strcpy``, ``strcmp``, or ``sprintf``.
+  
+  - Ex: If you try to use ``getline()`` and there is no space for the line you are trying to grab, you can 
+    print any useful message like ``error: memory safety``, but you must exit with return code 1.
 
 Useful Routines
 ---------------
@@ -207,11 +215,6 @@ General Requirements
 - Your project must not execute external programs or use network
   resources.
 
-- Your project should be memory safe.  For example, if your program is
-  susceptible to buffer-overflow based on certain inputs, it is not
-  memory safe.  As a corollary to this, you should not use any of the
-  following functions: ``strcat``, ``strcpy``, ``strcmp``, or ``sprintf``.
-
 - You should ``free`` any memory that you heap-allocate, and close
   any files that you open.
 
@@ -229,7 +232,7 @@ Collaboration Policy
 
 Please see the syllabus for the course plagarism policies.
 
-This is a **team project**.  Plagarism cases will be punished
+This is an **individual project**.  Plagarism cases will be punished
 harshly according to school policies.
 
 Please do keep any Git repos private, even after you finish this
@@ -249,11 +252,7 @@ Submission of your project will be handled via **Gradescope**.
 
 3. Submit this ``.zip`` file to Gradescope. You will get a confirmation email if you did this correctly.
 
-You can re-submit as many times as you want before the due date, but note the project will not be graded until
-a few days after the due date, **NOT** on-submission (similar to Canvas).
-
 .. warning::
         You are **REQUIRED** to use ``make-submission`` to form the ``.zip`` file. Failure to do so
-        may cause your program to not compile on Gradescope. A penalty to your grade will be applied
-        if you need to resubmit due to compilation issues stemming from not using this script.
+        may cause your program to not compile on Gradescope. You will have a second attempt due a week after if your code does not compile.
 
