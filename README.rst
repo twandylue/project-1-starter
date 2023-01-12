@@ -133,7 +133,8 @@ Tips
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 For example, first get a program that simply reads in the input file, one line at a time, and
-prints out what it reads in. Then, slowly add features and test them as you go.
+prints out what it reads in. Compile your code with the command ``make`` to test your work and check for memory safety.
+Then, slowly add features and test them as you go.
 
 Here are our recommended steps:
 
@@ -216,7 +217,8 @@ General Requirements
   resources.
 
 - You should ``free`` any memory that you heap-allocate, and close
-  any files that you open.
+  any files that you open. If you do not, the flag ``-fsanitize=address`` will catch a 
+  memory leak which will be shown either in your console or in the *.err file.
 
 - To compile your code, the grader should be able to ``cd`` into the
   root directory of your repository and run ``make`` using the
