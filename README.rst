@@ -256,5 +256,5 @@ Submission of your project will be handled via **Gradescope**.
 
 .. warning::
         You are **REQUIRED** to use ``make-submission`` to form the ``.zip`` file. Failure to do so
-        may cause your program to not compile on Gradescope. You will have a second attempt due a week after if your code does not compile.
+        may cause your program to not compile on Gradescope.
 
