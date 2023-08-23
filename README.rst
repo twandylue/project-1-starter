@@ -19,7 +19,26 @@ project thing will go. It also serves to get you into the mindset of a C
 programmer, something you will become quite familiar with over the next few
 months. Good luck!
 
-Project Requirements
+Deliverable 1
+=============
+
+Your first task is to familiarize yourself with the development environment.
+To provide a standardized development environment, you will be using a Docker container.
+Follow the instructions `here <https://github.com/CSCI-442-Mines/student-env>`_ to setup Docker and your environment.
+We are using Docker so your code can run in an environment similar to the autograder regardless of what your native platform is.
+
+If you have successfully completed the above linked tutorial, you should have access to this starter code inside container.
+
+Run the command ::
+
+        make && ./reverse
+
+Take a screenshot of your terminal, including the result of the above command. This is your submission for deliverable 1.
+It should say::
+
+        TODO: write a main function
+
+Deliverable 2
 ====================
 
 
