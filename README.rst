@@ -24,7 +24,7 @@ Deliverable 1
 
 Your first task is to familiarize yourself with the development environment.
 To provide a standardized development environment, you will be using a Docker container.
-Follow the instructions `here <https://github.com/CSCI-442-Mines/student-env>`_ to setup Docker and your environment.
+Follow the instructions `here <https://csci-442-mines.github.io/student-env/>`_ to setup Docker and your environment.
 We are using Docker so your code can run in an environment similar to the autograder regardless of what your native platform is.
 
 After you have successfully complete the first two steps of the above linked tutorial, you should have access to this starter code inside container.
