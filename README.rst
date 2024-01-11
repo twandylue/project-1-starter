@@ -227,7 +227,7 @@ General Requirements
   encountered.
 
 - Your project must be written in the C programming language, and
-  execute on Isengard.
+  execute on Dev Docker (student-env).
 
 - You should follow `Linux Kernel coding style`_, a common style guide
   for open-source C projects. 
