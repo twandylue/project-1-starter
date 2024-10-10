@@ -37,39 +37,49 @@ container. **Please make sure you are in the container**
 
 Run the command :
 
-    make && ./reverse
+```shell
+make && ./reverse
+```
 
 Take a screenshot of your terminal, including the result of the above
 command. This is your submission for deliverable 1. It should say:
 
-    TODO: write a main function
+```
+TODO: write a main function
+```
 
 ## Deliverable 2
 
 You will write a simple program called `reverse`. This program will be
 invoked in one of the following ways:
 
-    prompt> ./reverse input_file
-    prompt> ./reverse input_file output_file
+```shell
+./reverse input_file
+./reverse input_file output_file
+```
 
 An input file might look like this:
 
-    hello
-    this
-    is
+```shell
+hello
+this
+is
 
-    a file
+a file
+```
 
 The goal of the reversing program is to read in the data from the
 specified input file and reverse it; thus, the lines should be printed
 out in the reverse order of the input stream. Thus, for the
 aforementioned example, the output should be:
 
-    a file
+```shell
+a file
 
-    is
-    this
-    hello
+is
+this
+hello
+```
 
 The different ways to invoke the file (as above) all correspond to
 slightly different ways of using this simple new Unix utility.
@@ -137,7 +147,9 @@ You may find the following manuals useful:
 
 You can open these using the `man` command. For example:
 
-    prompt> man 3 fopen
+```shell
+man 3 fopen
+```
 
 ### Tips
 
@@ -188,7 +200,9 @@ make sure it works is crucial.
 We have provided some _basic_ tests for you to check against, you can
 run them via:
 
-    ./test-reverse.sh -v
+```shell
+./test-reverse.sh -v
+```
 
 However, **YOU WILL NEED TO TEST YOUR CODE ON MORE THAN JUST THE
 PROVIDED TESTS**.
@@ -257,7 +271,9 @@ Submission of your project will be handled via **Gradescope**.
 1.  Create the submission file using the provided `make-submission`
     script:
 
-        prompt> ./make-submission
+```shell
+./make-submission
+```
 
 2.  This will create a `.zip` file named `$USER-submission` (e.g., for
     me, this would be named `lhenke-submission.zip`).
