@@ -5,7 +5,7 @@
 
 > [!IMPORTANT]
 >
-> - You\'ll want to read this **entire document** before beginning the
+> - You'll want to read this **entire document** before beginning the
 >   project. Please ask any questions you have on Piazza, but only if
 >   this README does not answer your question.
 > - Do **NOT** open any of the projects in a windows operating system.
@@ -92,14 +92,14 @@ slightly different ways of using this simple new Unix utility.
   Unix-based systems, printing to the screen is the same as writing to
   a special file known as **standard output**, or `stdout` for short.
 
-Sounds easy, right? It should. But there are a few details\...
+Sounds easy, right? It should. But there are a few details...
 
 ### Assumptions
 
 - **String length**: You may NOT assume _anything_ about how long a
   line can be. I.e., it may be VERY long, or quite short.
 - **File length**: You may NOT assume _anything_ about how large a
-  file is. Thus, you may have to read in a very large input file\...
+  file is. Thus, you may have to read in a very large input file...
 
 ### Errors You Need to Handle
 
@@ -151,9 +151,40 @@ You can open these using the `man` command. For example:
 man 3 fopen
 ```
 
-### Tips
+## General Requirements
 
-#### 1: Start small, and get things working incrementally
+- Your program should have a zero exit status if no errors are
+  encountered.
+- Your project must be written in the C programming language, and
+  execute on Dev Docker (student-env).
+- You should follow [Linux Kernel coding
+  style](https://www.kernel.org/doc/html/v5.8/process/coding-style.html),
+  a common style guide for open-source C projects.
+- Your project must not execute external programs or use network
+  resources.
+- You should `free` any memory that you heap-allocate, and close any
+  files that you open. If you do not, the flag `-fsanitize=address`
+  will catch a memory leak which will be shown either in your console
+  or in the \*.err file.
+- To compile your code, the grader should be able to `cd` into the
+  root directory of your repository and run `make` using the provided
+  `Makefile`.
+
+Your grade will be negatively impacted if you do not heed these
+requirements.
+
+## Tips
+
+### 1: Use the VS Code workspace
+
+If you're using VS Code (which we recommend), you can open the
+[`project-1.code-workspace`](project-1.code-workspace) file and click
+the `Open Workspace` button. This will open the project in a new window
+with the recommended settings. We've also included a debug configuration,
+allowing you to debug your program - all you need to do is go to the
+debug tab and click the green play button.
+
+### 2: Start small, and get things working incrementally
 
 For example, first get a program that simply reads in the input file,
 one line at a time, and prints out what it reads in. Compile your code
@@ -170,9 +201,9 @@ Here are our recommended steps:
     262: would a map or set even be useful here? What about a stack or a
     queue? How might you implement one?
 
-    > - Don\'t pass by this too quickly. \"A week of coding can save
-    >   you an hour of planning\" as the saying goes.
-    > - But also don\'t over-engineer this. No need to have a perfect
+    > - Don't pass by this too quickly. "A week of coding can save
+    >   you an hour of planning" as the saying goes.
+    > - But also don't over-engineer this. No need to have a perfect
     >   circular array or balanced binary tree. A linked list might be
     >   perfect in this scenario: quick to implement, and can easily
     >   be used to solve the problem at hand (_hint hint_).
@@ -183,9 +214,9 @@ Here are our recommended steps:
 4.  Use your data structure to print the lines in reverse order of the
     input file.
 
-5.  Handle error cases, and so forth\...
+5.  Handle error cases, and so forth...
 
-#### 2: Testing is critical
+### 3: Testing is critical
 
 A great programmer we once knew said you have to write five to ten lines
 of test code for every line of code you produce; testing your code to
@@ -222,9 +253,9 @@ PROVIDED TESTS**.
 > (e.g., missing the last character of the last line, produces extraneous
 > output, throws an error, etc.), **you will get a 0 on that specific
 > test**. Take extra care with testing to ensure that a minor error
-> doesn\'t propogate and cause your program to fail all test cases.
+> doesn't propogate and cause your program to fail all test cases.
 
-#### 3: Keep old versions around
+### 4: Keep old versions around
 
 Keep copies of old versions of your program around, as you may introduce
 bugs and not be able to easily undo them.
@@ -232,34 +263,16 @@ bugs and not be able to easily undo them.
 - Use **git** for this. This project is already a Git repository, so
   take advantage of all the version control features git provides!
 
-### General Requirements
+## Collaboration Policy
 
-- Your program should have a zero exit status if no errors are
-  encountered.
-- Your project must be written in the C programming language, and
-  execute on Dev Docker (student-env).
-- You should follow [Linux Kernel coding
-  style](https://www.kernel.org/doc/html/v5.8/process/coding-style.html),
-  a common style guide for open-source C projects.
-- Your project must not execute external programs or use network
-  resources.
-- You should `free` any memory that you heap-allocate, and close any
-  files that you open. If you do not, the flag `-fsanitize=address`
-  will catch a memory leak which will be shown either in your console
-  or in the \*.err file.
-- To compile your code, the grader should be able to `cd` into the
-  root directory of your repository and run `make` using the provided
-  `Makefile`.
+This is an **individual project**. All code you submit should be written
+by yourself. You should not share your code with others.
 
-Your grade will be negatively impacted if you do not heed these
-requirements.
+Please see the syllabus for the full collaboration policy.
 
-### Collaboration Policy
-
-Please see the syllabus for the course plagarism policies.
-
-This is an **individual project**. Plagarism cases will be punished
-harshly according to school policies.
+> [!WARNING]
+>
+> **Plagarism will be punished harshly!**
 
 Please do keep any Git repos private, even after you finish this course.
 This will keep the project fun for future students!
