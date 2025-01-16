@@ -114,6 +114,20 @@ static void free_lines(struct Lines *lines) {
   free(lines);
 }
 
+/*
+* Compare two strings, and return the difference between the first different characters.
+* If the strings are the same, return 0.
+* If the first string is greater than the second string, return a positive number.
+* If the first string is less than the second string, return a negative number.
+*/
+static int compare_str(const char *s1, const char *s2) {
+  while (*s1 && *s2 && *s1 == *s2) {
+    s1++;
+    s2++;
+  }
+  return *s1 - *s2;
+}
+
 int main(int argc, char *argv[])
 {
   if (argc < 2 || argc > 3) {
@@ -138,8 +152,7 @@ int main(int argc, char *argv[])
   }
 
   // if input file is the same as output file, return error with code 1
-  // TODO:
-  if (argc == 3 && strcmp(argv[1], argv[2]) == 0) {
+  if (argc == 3 && compare_str(argv[1], argv[2]) == 0) {
     fprintf(stderr, "error: input and output file must differ\n");
     return 1;
   }
